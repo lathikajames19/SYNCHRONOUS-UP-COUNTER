@@ -28,19 +28,51 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
 **Procedure**
 
-/* write all the steps invloved */
+1.Use module projname(input,output) to start the Verilog programming. 2.Assign inputs and outputs using the word input and output respectively. 3.Use defined keywords like wire,assign and required logic gates to represent the boolean expression. 4.Use each output to represent one for difference and the other for borrow. 5.End the verilog program using keyword endmodule
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+module e11(out,clk,rst);
 
-Developed by: RegisterNumber:
+input clk,rst;
+
+output reg [3:0]out;
+
+always @ (posedge clk)
+
+begin
+
+if(rst)
+
+out<=0=>
+
+else
+
+out <= out+1; end
+
+endmodule
+ 
+
+/*Developed by:LATHIKA.K
+
+RegisterNumber:24001110
 */
 
 **RTL LOGIC UP COUNTER**
 
+![image](https://github.com/user-attachments/assets/7689de11-577f-40de-b568-4aa42813279c)
+
+
 **TIMING DIAGRAM FOR IP COUNTER**
+
+![image](https://github.com/user-attachments/assets/4ff8047d-9e1f-4dc1-a599-50652b2c8931)
+
 
 **TRUTH TABLE**
 
+![image](https://github.com/user-attachments/assets/b754e915-d02f-40ac-bf41-9ac1f4219799)
+
+
 **RESULTS**
+
+Thus, the Synchronous Up Counter is designed and the truth table is verified using Quartus II.
